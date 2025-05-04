@@ -1,0 +1,206 @@
+/* Estilos gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    padding: 30px;
+    width: 100%;
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 30px;
+    font-size: 24px;
+}
+
+/* Estilos do cartão */
+.card-container {
+    perspective: 1000px;
+    margin-bottom: 30px;
+}
+
+.card {
+    width: 100%;
+    height: 200px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+}
+
+.card-front {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    background: linear-gradient(135deg, #434343 0%, #000000 100%);
+    border-radius: 15px;
+    padding: 20px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-logo {
+    align-self: flex-end;
+    height: 40px;
+    margin-bottom: 20px;
+}
+
+.card-logo img {
+    height: 100%;
+}
+
+.card-number {
+    font-size: 22px;
+    letter-spacing: 2px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.card-details {
+    display: flex;
+    justify-content: space-between;
+}
+
+.label {
+    font-size: 10px;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+    opacity: 0.7;
+}
+
+.value {
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+/* Estilos do formulário */
+.form-container {
+    margin-top: 20px;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #555;
+    font-weight: 600;
+}
+
+input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+input:focus {
+    outline: none;
+    border-color: #667eea;
+}
+
+.result {
+    margin: 20px 0;
+    padding: 15px;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    font-weight: 500;
+}
+
+button {
+    background-color: #667eea;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+button:hover {
+    background-color: #5a6ecc;
+}
+
+#clear-btn {
+    background-color: #f44336;
+}
+
+#clear-btn:hover {
+    background-color: #d32f2f;
+}
+
+/* Estilos responsivos */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 20px;
+    }
+    
+    .card-number {
+        font-size: 18px;
+    }
+}
+
+footer {
+    margin-top: 20px;
+    color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+}
+
+/* Estilos específicos para as bandeiras */
+.visa-bg {
+    background: linear-gradient(135deg, #0077be 0%, #001b4d 100%);
+}
+
+.mastercard-bg {
+    background: linear-gradient(135deg, #ff5f00 0%, #b30000 100%);
+}
+
+.amex-bg {
+    background: linear-gradient(135deg, #108168 0%, #003d7a 100%);
+}
+
+.discover-bg {
+    background: linear-gradient(135deg, #ff6600 0%, #a10000 100%);
+}
+
+.diners-bg {
+    background: linear-gradient(135deg, #005ba8 0%, #002d68 100%);
+}
+
+.jcb-bg {
+    background: linear-gradient(135deg, #009fe3 0%, #006935 100%);
+}
+
+.unknown-bg {
+    background: linear-gradient(135deg, #434343 0%, #000000 100%);
+}
